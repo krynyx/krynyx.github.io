@@ -1,4 +1,8 @@
 <?php
+/* @author: krynyx
+ * @app: MegaSena Inteligente
+ * @data: 2023-10-28
+ */ 
 $arquivo_resultados = file_get_contents('resultados-megasena.txt');
 $resultados =  explode("\n", $arquivo_resultados);
 $total = count($resultados) - 1;
@@ -27,11 +31,12 @@ for ($x = 0; $x < $total; $x++) {
 	}
 }
 
+/* Gerar estatística das dezenas mais atrasadas */
 for ($d = 1; $d <= 60; $d++) {
 	$dezena = ($d < 10) ? '0'.$d : $d;
 	$maisAtrasadas[$dezena] = 0;
 }
-//As mais atrasadas são as que não saíram nos últimos 20 concursos
+//As mais atrasadas são as que menos saíram nos últimos 20 concursos
 for ($x = ($total - 20); $x < $total; $x++) {
 	$dezenas = explode('-', $resultados[$x]);
 	
