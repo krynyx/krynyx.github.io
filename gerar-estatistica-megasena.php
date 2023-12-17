@@ -3,7 +3,7 @@
  * @app: MegaSena Inteligente
  * @data: 2023-10-28
  */ 
-$arquivo_resultados = file_get_contents('resultados-megasena.txt');
+$arquivo_resultados = file_get_contents('resultados-da-megasena.txt');
 $resultados =  explode("\n", $arquivo_resultados);
 $total = count($resultados) - 1;
 
