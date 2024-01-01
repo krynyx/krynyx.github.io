@@ -59,10 +59,10 @@ $dezenasImpares = array_keys($dezenasImpares);
 $maisAtrasadas = array_keys($maisAtrasadas);
 
 //cortar o array para obter apenas 16 dezenas
-$maisSorteadas = array_slice($maisSorteadas, 0 ,16);
-$dezenasPares = array_slice($dezenasPares, 0 ,16);
-$dezenasImpares = array_slice($dezenasImpares, 0 ,16);
-$maisAtrasadas = array_slice($maisAtrasadas, 0 ,16);
+$maisSorteadas = array_slice($maisSorteadas, 0 ,18);
+$dezenasPares = array_slice($dezenasPares, 0 ,18);
+$dezenasImpares = array_slice($dezenasImpares, 0 ,18);
+$maisAtrasadas = array_slice($maisAtrasadas, 0 ,18);
 
 echo 'MAIS_SORTEADAS:'.implode('-', $maisSorteadas)."\r\n";
 echo 'DEZENAS_PARES:'.implode('-', $dezenasPares)."\r\n";
