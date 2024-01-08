@@ -36,8 +36,8 @@ for ($d = 1; $d <= 60; $d++) {
 	$dezena = ($d < 10) ? '0'.$d : $d;
 	$maisAtrasadas[$dezena] = 0;
 }
-//As mais atrasadas são as que menos saíram nos últimos 20 concursos
-for ($x = ($total - 20); $x < $total; $x++) {
+//As mais atrasadas são as que menos saíram nos últimos 30 concursos
+for ($x = ($total - 30); $x < $total; $x++) {
 	$dezenas = explode('-', $resultados[$x]);
 	
 	foreach ($dezenas as $d) {
@@ -59,10 +59,10 @@ $dezenasImpares = array_keys($dezenasImpares);
 $maisAtrasadas = array_keys($maisAtrasadas);
 
 //cortar o array para obter apenas 16 dezenas
-$maisSorteadas = array_slice($maisSorteadas, 0 ,18);
-$dezenasPares = array_slice($dezenasPares, 0 ,18);
-$dezenasImpares = array_slice($dezenasImpares, 0 ,18);
-$maisAtrasadas = array_slice($maisAtrasadas, 0 ,18);
+$maisSorteadas = array_slice($maisSorteadas, 0 ,27);
+$dezenasPares = array_slice($dezenasPares, 0 ,27);
+$dezenasImpares = array_slice($dezenasImpares, 0 ,27);
+$maisAtrasadas = array_slice($maisAtrasadas, 0 ,27);
 
 echo 'MAIS_SORTEADAS:'.implode('-', $maisSorteadas)."\r\n";
 echo 'DEZENAS_PARES:'.implode('-', $dezenasPares)."\r\n";
